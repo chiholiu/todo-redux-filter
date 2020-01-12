@@ -14,7 +14,6 @@ const TodoList = ({
     updateEdit,
     getEditText
 }) => {
-    console.log(todoArray);
     let todos = todoArray.map((item, i) => {
         return (
             item.edit ?

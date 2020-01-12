@@ -3,7 +3,11 @@ export const types = {
     TOGGLE_TODO: 'TOGGLE_TODO',
     EDIT_TODO: 'EDIT_TODO',
     SAVE_EDIT: 'SAVE_EDIT',
-    GET_EDIT_TEXT: 'GET_EDIT_TEXT'
+    GET_EDIT_TEXT: 'GET_EDIT_TEXT',
+    CURRENT_FILTER: 'CURRENT_FILTER',
+    ALL: 'ALL',
+    COMPLETE: 'COMPLETE',
+    INCOMPLETE: 'INCOMPLETE'
 }
 
 let nextTodoId = 0;
@@ -33,4 +37,8 @@ export const getEditText = (editText, todoId ) => ({
 export const updateEdit = todoId => ({
     type: types.SAVE_EDIT,
     id: todoId
+});
+
+export const currentFilter = filter => ({
+    type: types.${filter}
 });
