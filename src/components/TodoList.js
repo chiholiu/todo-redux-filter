@@ -19,9 +19,8 @@ const TodoList = ({
         return (
             item.edit ?
             <div key={i}>
-            <input value={item.todoText} onChange={(e) => getEditText(e.target.value, item.id)}/>
-            <button onClick={() => updateEdit(item.id)}>Save</button>
-            Edit
+                <input value={item.todoText} onChange={(e) => getEditText(e.target.value, item.id)}/>
+                <button onClick={() => updateEdit(item.id)}>Save</button>
             </div>
             :
             <div key={i}>
@@ -46,7 +45,7 @@ const mapDispatchToProps = dispatch => ({
     toggleTodo: id => dispatch(toggleTodo(id)),
     editTodo: id => dispatch(editTodo(id)),
     updateEdit: id => dispatch(updateEdit(id)),
-    getEditText: text => dispatch(getEditText(text))
+    getEditText: (text, id) => dispatch(getEditText(text, id))
 });
 
 const mapStateToProps = state => ({
