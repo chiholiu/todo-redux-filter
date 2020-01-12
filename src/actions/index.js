@@ -2,7 +2,8 @@ export const types = {
     ADD_TODO: 'ADD_TODO',
     TOGGLE_TODO: 'TOGGLE_TODO',
     EDIT_TODO: 'EDIT_TODO',
-    SAVE_EDIT: 'SAVE_EDIT'
+    SAVE_EDIT: 'SAVE_EDIT',
+    GET_EDIT_TEXT: 'GET_EDIT_TEXT'
 }
 
 let nextTodoId = 0;
@@ -23,9 +24,10 @@ export const editTodo = todoId => ({
     id: todoId
 });
 
-export const getEditTex = editText => ({
+export const getEditText = (editText, todoId ) => ({
     type: types.GET_EDIT_TEXT,
-    editText
+    editText,
+    id: todoId
 })
 
 export const updateEdit = todoId => ({

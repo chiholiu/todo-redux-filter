@@ -19,7 +19,7 @@ const TodoList = ({
         return (
             item.edit ?
             <div key={i}>
-            <input value={item.todoText} onChange={() => getEditText(item.id, item.todoText)}/>
+            <input value={item.todoText} onChange={(e) => getEditText(e.target.value, item.id)}/>
             <button onClick={() => updateEdit(item.id)}>Save</button>
             Edit
             </div>

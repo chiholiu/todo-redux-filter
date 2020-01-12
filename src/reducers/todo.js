@@ -32,7 +32,7 @@ export const todo = (state = [], action) => {
         case types.GET_EDIT_TEXT: {
             return state.map(todo => todo.id === action.id ? {
                     ...todo,
-                    edit: false }: 
+                    todoText: action.editText}: 
             todo);
         }
         default: 
