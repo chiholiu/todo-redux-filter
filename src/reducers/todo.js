@@ -25,24 +25,17 @@ export const todo = (state = [], action) => {
                 todo);
             }
         case types.SAVE_EDIT: {
-            console.log('save');
             return state.map(todo => todo.id === action.id ? {
                     ...todo,
                     edit: false }: 
                 todo);
             }
         case types.GET_EDIT_TEXT: {
-            console.log('get edit text')
+            console.log('get edit text');
             return state.map(todo => todo.id === action.id ? {
                     ...todo,
                     todoText: action.editText}: 
             todo);
-        }
-        case types.ALL: {
-            console.log('All');
-            return state.map(todo => todo.id === action.id ? {
-                ...todo}: 
-        todo);
         }
         default: 
             return state;

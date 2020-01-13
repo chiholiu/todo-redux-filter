@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import AddTodo from './components/AddTodo';
-import TodoList from './components/TodoList';
+import VisibilityTodo from './components/VisibilityTodo';
 import FilterButtons from './components/FilterButtons';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <AddTodo/>
-        <TodoList/>
+        <VisibilityTodo/>
         <FilterButtons/>
       </div>
     );

@@ -40,5 +40,6 @@ export const updateEdit = todoId => ({
 });
 
 export const currentFilter = filter => ({
-    type: types.${filter}
+    type: types[filter],
+    filter
 });
